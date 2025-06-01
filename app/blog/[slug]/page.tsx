@@ -6,6 +6,15 @@ import Image from "next/image"
 import { Calendar } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
+// Generate static params for all blog posts
+export function generateStaticParams() {
+  // Return all possible blog post slugs for static generation
+  return [
+    { slug: "anime-adventures-l3-scaling" },
+    // Add more blog post slugs here as needed
+  ]
+}
+
 // Dummy content for a single post
 const getPostData = (slug: string) => {
   // In a real app, fetch this from a CMS or markdown files
