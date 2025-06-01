@@ -1,17 +1,20 @@
-# Handle client-side routing for Next.js
+# SPA fallback for client-side routing
 /*    /index.html   200
 
 # Redirect common paths
 /home    /    301
-/docs    /documentation    301
+/docs    /documentation/    301
 
-# Handle trailing slashes
-/about    /about/    301
-/blog    /blog/    301
-/community    /community/    301
-/contact    /contact/    301
-/documentation    /documentation/    301
-/metrics    /metrics/    301
-/privacy-policy    /privacy-policy/    301
-/terms-of-service    /terms-of-service/    301
-/whitepaper    /whitepaper/    301
+# Handle static HTML pages with trailing slashes
+/about    /about/index.html    200
+/blog    /blog/index.html    200
+/community    /community/index.html    200
+/contact    /contact/index.html    200
+/documentation    /documentation/index.html    200
+/metrics    /metrics/index.html    200
+/privacy-policy    /privacy-policy/index.html    200
+/terms-of-service    /terms-of-service/index.html    200
+/whitepaper    /whitepaper/index.html    200
+
+# Blog post redirects
+/blog/anime-adventures-l3-scaling    /blog/anime-adventures-l3-scaling/index.html    200
